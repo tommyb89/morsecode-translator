@@ -1,6 +1,7 @@
-// Select all the morse code symbols
+"use strict";
 
-const morseCode = {
+// Select all the morse code symbols
+var morseCode = {
   ".-": "A",
   "-...": "B",
   "-.-.": "C",
@@ -36,5 +37,5 @@ const morseCode = {
   "-....": "6",
   "--...": "7",
   "---..": "8",
-  "----.": "9",
+  "----.": "9"
 };
