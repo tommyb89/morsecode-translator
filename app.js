@@ -85,6 +85,7 @@ const morseCode = {
   "---..": "8",
   "----.": "9",
 };
+
 //Get value from english input field
 const englishText = englishInput.value;
 
@@ -92,13 +93,18 @@ const englishText = englishInput.value;
 const lettersArr = (str) => str.toLowerCase().split("");
 
 // Function English to Morse Code
-export const encodeToMorse = (str) => {
-  lettersArr(str);
+const encodeToMorse = (str) => {
+  const lettersArr = str.toLowerCase().split("");
   // Find english letters in the morseCode object and return morse character
   const morseSymbols = lettersArr.map((letter) => alphabet[letter]);
   const morseText = morseSymbols.join(" ");
+
+  return morseText;
+  console.log(morseText);
 };
-output.innerHTML = morseText;
+console.log(encodeToMorse("hello"));
+encodeToMorse("hello");
+// output.innerHTML = morseText;
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////
 ///////////////////////////////////////////////
