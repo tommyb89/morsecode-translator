@@ -8,33 +8,72 @@ var output = document.querySelector(".output"); // select buttons
 
 var submit = document.querySelector(".btn__submit");
 var clear = document.querySelector(".btn__clear");
+var alphabet = {
+  a: ".-",
+  b: "-...",
+  c: "-.-.",
+  d: "-..",
+  e: ".",
+  f: "..-.",
+  g: "--.",
+  h: "....",
+  i: "..",
+  j: ".---",
+  k: "-.-",
+  l: ".-..",
+  m: "--",
+  n: "-.",
+  o: "---",
+  p: ".--.",
+  q: "--.-",
+  r: ".-.",
+  s: "...",
+  t: "-",
+  u: "..-",
+  v: "...-",
+  w: ".--",
+  x: "-..-",
+  y: "-.--",
+  z: "--..",
+  " ": " ",
+  1: ".----",
+  2: "..---",
+  3: "...--",
+  4: "....-",
+  5: ".....",
+  6: "-....",
+  7: "--...",
+  8: "---..",
+  9: "----.",
+  0: "-----"
+};
 var morseCode = {
-  ".-": "A",
-  "-...": "B",
-  "-.-.": "C",
-  "-..": "D",
-  ".": "E",
-  "..-.": "F",
-  "--.": "G",
-  "....": "H",
-  "..": "I",
-  ".---": "J",
-  "-.-": "K",
-  ".-..": "L",
-  "--": "M",
-  "-.": "N",
-  "---": "O",
-  ".--.": "P",
-  "--.-": "Q",
-  ".-.": "R",
-  "...": "S",
-  "-": "T",
-  "..-": "U",
-  "...-": "V",
-  ".--": "W",
-  "-..-": "X",
-  "-.--": "Y",
-  "--..": "Z",
+  ".-": "a",
+  "-...": "b",
+  "-.-.": "c",
+  "-..": "d",
+  ".": "e",
+  "..-.": "f",
+  "--.": "g",
+  "....": "h",
+  "..": "i",
+  ".---": "j",
+  "-.-": "k",
+  ".-..": "l",
+  "--": "m",
+  "-.": "n",
+  "---": "o",
+  ".--.": "p",
+  "--.-": "q",
+  ".-.": "r",
+  "...": "s",
+  "-": "t",
+  "..-": "u",
+  "...-": "v",
+  ".--": "w",
+  "-..-": "x",
+  "-.--": "y",
+  "--..": "z",
   "-----": "0",
   ".----": "1",
   "..---": "2",
@@ -51,7 +90,13 @@ var encodeToMorse = function encodeToMorse() {
   //Get value from english input field
   var englishText = englishInput.value; // Divide it into separate letters
 
-  var textArr = englishText.toLowerCase().split(""); // console.log(textArr);
+  var lettersArr = englishText.toLowerCase().split(""); // console.log(textArr);
+  // Find english letters in the morseCode object
+
+  var morseSymbols = lettersArr.map(function (letter) {
+    return alphabet[letter];
+  });
+  console.log(morseSymbols);
 }; // // Function decode morse
 // const decodeMorse = () => {
 //   //Get value from morse input field
@@ -65,5 +110,5 @@ var encodeToMorse = function encodeToMorse() {
 // add event listeners to buttons and passing a function to translate
 
 
-submit.addEventListener("click", decodeMorse); // submit.addEventListener("click", alert("clicked"));
+submit.addEventListener("click", encodeToMorse); // submit.addEventListener("click", alert("clicked"));
 // Select all the morse code symbols

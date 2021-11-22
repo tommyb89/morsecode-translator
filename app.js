@@ -8,33 +8,72 @@ const output = document.querySelector(".output");
 const submit = document.querySelector(".btn__submit");
 const clear = document.querySelector(".btn__clear");
 
+const alphabet = {
+  a: ".-",
+  b: "-...",
+  c: "-.-.",
+  d: "-..",
+  e: ".",
+  f: "..-.",
+  g: "--.",
+  h: "....",
+  i: "..",
+  j: ".---",
+  k: "-.-",
+  l: ".-..",
+  m: "--",
+  n: "-.",
+  o: "---",
+  p: ".--.",
+  q: "--.-",
+  r: ".-.",
+  s: "...",
+  t: "-",
+  u: "..-",
+  v: "...-",
+  w: ".--",
+  x: "-..-",
+  y: "-.--",
+  z: "--..",
+  " ": " ",
+  1: ".----",
+  2: "..---",
+  3: "...--",
+  4: "....-",
+  5: ".....",
+  6: "-....",
+  7: "--...",
+  8: "---..",
+  9: "----.",
+  0: "-----",
+};
 const morseCode = {
-  ".-": "A",
-  "-...": "B",
-  "-.-.": "C",
-  "-..": "D",
-  ".": "E",
-  "..-.": "F",
-  "--.": "G",
-  "....": "H",
-  "..": "I",
-  ".---": "J",
-  "-.-": "K",
-  ".-..": "L",
-  "--": "M",
-  "-.": "N",
-  "---": "O",
-  ".--.": "P",
-  "--.-": "Q",
-  ".-.": "R",
-  "...": "S",
-  "-": "T",
-  "..-": "U",
-  "...-": "V",
-  ".--": "W",
-  "-..-": "X",
-  "-.--": "Y",
-  "--..": "Z",
+  ".-": "a",
+  "-...": "b",
+  "-.-.": "c",
+  "-..": "d",
+  ".": "e",
+  "..-.": "f",
+  "--.": "g",
+  "....": "h",
+  "..": "i",
+  ".---": "j",
+  "-.-": "k",
+  ".-..": "l",
+  "--": "m",
+  "-.": "n",
+  "---": "o",
+  ".--.": "p",
+  "--.-": "q",
+  ".-.": "r",
+  "...": "s",
+  "-": "t",
+  "..-": "u",
+  "...-": "v",
+  ".--": "w",
+  "-..-": "x",
+  "-.--": "y",
+  "--..": "z",
   "-----": "0",
   ".----": "1",
   "..---": "2",
@@ -52,8 +91,12 @@ const encodeToMorse = () => {
   //Get value from english input field
   const englishText = englishInput.value;
   // Divide it into separate letters
-  const textArr = englishText.toLowerCase().split("");
+  const lettersArr = englishText.toLowerCase().split("");
   // console.log(textArr);
+
+  // Find english letters in the morseCode object
+  const morseSymbols = lettersArr.map((letter) => alphabet[letter]);
+  console.log(morseSymbols);
 };
 
 // // Function decode morse
@@ -68,6 +111,6 @@ const encodeToMorse = () => {
 // };
 
 // add event listeners to buttons and passing a function to translate
-submit.addEventListener("click", decodeMorse);
+submit.addEventListener("click", encodeToMorse);
 // submit.addEventListener("click", alert("clicked"));
 // Select all the morse code symbols
