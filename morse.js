@@ -1,6 +1,6 @@
 // Select all the morse code symbols
 
-const morseCode = {
+export const morseCode = {
   ".-": "A",
   "-...": "B",
   "-.-.": "C",
