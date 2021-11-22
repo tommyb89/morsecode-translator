@@ -32,14 +32,12 @@ section {
 
 #morse-input,
 #english-input {
-  width: 100%;
-  height: 150px;
+  padding: 5px;
   margin: 10px;
-  box-sizing: border-box;
+  font-size: 20px;
   border: 2px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
-  resize: none;
 }
 
 .btn {
@@ -58,5 +56,6 @@ section {
 .output {
   width: 300px;
   resize: none;
-  padding: 5px;
+  padding: 10px;
+  font-size: 24px;
 }

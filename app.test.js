@@ -1,5 +1,5 @@
 import { expect, it } from "@jest/globals";
-import { encodeToMorse } from "./app.js";
+import { encodeToMorse } from "./app";
 
 // Translate symbols to letters
 

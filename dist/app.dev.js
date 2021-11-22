@@ -1,5 +1,10 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.encodeToMorse = void 0;
+// import { morseCode } from "./morse.js";
 // Select inputs
 var morseInput = document.getElementById("morse-input");
 var englishInput = document.getElementById("english-input");
@@ -83,22 +88,29 @@ var morseCode = {
   "--...": "7",
   "---..": "8",
   "----.": "9"
-}; // Function translate to morse code
+}; //Get value from english input field
 
-var encodeToMorse = function encodeToMorse(word) {
-  // Divide it into separate letters
-  var lettersArr = word.toLowerCase().split(""); // Find english letters in the morseCode object and return morse character
+var englishText = englishInput.value; // Divide it into separate letters
+
+var lettersArr = function lettersArr(str) {
+  return str.toLowerCase().split("");
+}; // Function English to Morse Code
+
+
+var encodeToMorse = function encodeToMorse(str) {
+  lettersArr(str); // Find english letters in the morseCode object and return morse character
 
   var morseSymbols = lettersArr.map(function (letter) {
     return alphabet[letter];
   });
-  var morseText = morseSymbols.join(" "); // output.innerHTML = morseText;
+  var morseText = morseSymbols.join(" ");
+};
 
-  return morseText;
-}; //Get value from english input field
-
-
-var englishText = englishInput.value; // // Function decode morse
+exports.encodeToMorse = encodeToMorse;
+output.innerHTML = morseText; ////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+// // Function decode morse
 // const decodeMorse = () => {
 //   //Get value from morse input field
 //   const morseText = morseInput.value;

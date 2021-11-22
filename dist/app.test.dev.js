@@ -2,7 +2,7 @@
 
 var _globals = require("@jest/globals");
 
-var _app = require("./app.js");
+var _app = require("./app");
 
 // Translate symbols to letters
 (0, _globals.it)("should translate A ", function () {
