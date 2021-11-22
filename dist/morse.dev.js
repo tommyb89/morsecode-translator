@@ -1,9 +1,5 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.morseCode = void 0;
 // Select all the morse code symbols
 var morseCode = {
   ".-": "A",
@@ -43,4 +39,3 @@ var morseCode = {
   "---..": "8",
   "----.": "9"
 };
-exports.morseCode = morseCode;
