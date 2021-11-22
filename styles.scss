@@ -12,19 +12,21 @@ body {
 section {
   margin-top: 100px;
   text-align: center;
-}
-section .title {
-  color: black;
+  & .title {
+    color: rgb(0, 0, 0);
+  }
 }
 
 .container {
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
-}
-.container__morse, .container__english {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: left;
+
+  &__morse,
+  &__english {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+  }
 }
