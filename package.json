@@ -1,0 +1,22 @@
+{
+  "name": "morsecode-translator",
+  "version": "1.0.0",
+  "description": "Morse Code translator app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommyb89/morsecode-translator.git"
+  },
+  "author": "tomzy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tommyb89/morsecode-translator/issues"
+  },
+  "homepage": "https://github.com/tommyb89/morsecode-translator#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
