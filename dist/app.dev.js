@@ -2,8 +2,8 @@
 
 // import { morseCode } from "./morse.js";
 // Select inputs
-var morseInput = document.getElementById("morse");
-var englishInput = document.getElementById("english");
+var morseInput = document.getElementById("morse-input");
+var englishInput = document.getElementById("english-input");
 var output = document.querySelector(".output"); // select buttons
 
 var submit = document.querySelector(".btn__submit");
@@ -49,9 +49,10 @@ var morseCode = {
 
 var decodeMorse = function decodeMorse() {
   var morseText = morseInput.value;
-  var textArr = morseText.toLowerCase().split("");
-}; // decodeSymbol();
-// add event listeners to buttons
+  var textArr = morseText.split("");
+  console.log(textArr);
+}; // add event listeners to buttons and passing a function to translate
 
 
-submit.addEventListener("click", alert("clicked")); // Select all the morse code symbols
+submit.addEventListener("click", decodeMorse); // submit.addEventListener("click", alert("clicked"));
+// Select all the morse code symbols
