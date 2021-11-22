@@ -10,7 +10,7 @@
   <body>
     <section>
       <h1 class="title">Morse Code Translator</h1>
-      <div class="container">
+      <form action="" class="container">
         <div class="container__morse">
           <label for="morse">Morse Code</label>
           <input type="text" id="morse" name="morse" />
@@ -19,7 +19,13 @@
           <label for="english">English</label>
           <input type="text" id="english" name="english" />
         </div>
+      </form>
+      <div class="btn">
+        <button class="btn__submit" type="submit">TRANSLATE</button>
+        <button class="btn__clear" type="submit">CLEAR</button>
       </div>
+
+      <div class="output"></div>
     </section>
     <script src="app.js"></script>
     <script src="morse.js"></script>

@@ -26,18 +26,28 @@ section .title {
 .container__morse, .container__english {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  text-align: center;
 }
 
 #morse,
 #english {
   width: 100%;
   height: 150px;
-  padding: 12px 20px;
+  margin: 10px;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
   resize: none;
+}
+
+.btn {
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+}
+.btn__submit, .btn__clear {
+  padding: 10px;
+  margin: 20px;
+  font-weight: bold;
 }
