@@ -8,102 +8,24 @@ const output = document.querySelector(".output");
 const submit = document.querySelector(".btn__submit");
 const clear = document.querySelector(".btn__clear");
 
-const alphabet = {
-  a: ".-",
-  b: "-...",
-  c: "-.-.",
-  d: "-..",
-  e: ".",
-  f: "..-.",
-  g: "--.",
-  h: "....",
-  i: "..",
-  j: ".---",
-  k: "-.-",
-  l: ".-..",
-  m: "--",
-  n: "-.",
-  o: "---",
-  p: ".--.",
-  q: "--.-",
-  r: ".-.",
-  s: "...",
-  t: "-",
-  u: "..-",
-  v: "...-",
-  w: ".--",
-  x: "-..-",
-  y: "-.--",
-  z: "--..",
-  " ": " ",
-  1: ".----",
-  2: "..---",
-  3: "...--",
-  4: "....-",
-  5: ".....",
-  6: "-....",
-  7: "--...",
-  8: "---..",
-  9: "----.",
-  0: "-----",
-};
-const morseCode = {
-  ".-": "a",
-  "-...": "b",
-  "-.-.": "c",
-  "-..": "d",
-  ".": "e",
-  "..-.": "f",
-  "--.": "g",
-  "....": "h",
-  "..": "i",
-  ".---": "j",
-  "-.-": "k",
-  ".-..": "l",
-  "--": "m",
-  "-.": "n",
-  "---": "o",
-  ".--.": "p",
-  "--.-": "q",
-  ".-.": "r",
-  "...": "s",
-  "-": "t",
-  "..-": "u",
-  "...-": "v",
-  ".--": "w",
-  "-..-": "x",
-  "-.--": "y",
-  "--..": "z",
-  "-----": "0",
-  ".----": "1",
-  "..---": "2",
-  "...--": "3",
-  "....-": "4",
-  ".....": "5",
-  "-....": "6",
-  "--...": "7",
-  "---..": "8",
-  "----.": "9",
-};
-
 //Get value from english input field
-const englishText = englishInput.value;
+// const englishText = englishInput.value;
 
 // Divide it into separate letters
-const lettersArr = (str) => str.toLowerCase().split("");
+// const lettersArr = (str) => str.toLowerCase().split("");
 
 // Function English to Morse Code
-const encodeToMorse = (str) => {
+export const encodeToMorse = (str) => {
   const lettersArr = str.toLowerCase().split("");
   // Find english letters in the morseCode object and return morse character
   const morseSymbols = lettersArr.map((letter) => alphabet[letter]);
   const morseText = morseSymbols.join(" ");
 
   return morseText;
-  console.log(morseText);
 };
 console.log(encodeToMorse("hello"));
 encodeToMorse("hello");
+
 // output.innerHTML = morseText;
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -120,4 +42,4 @@ encodeToMorse("hello");
 // };
 
 // Event listeners
-submit.addEventListener("click", encodeToMorse);
+// submit.addEventListener("click", encodeToMorse);

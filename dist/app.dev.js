@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.encodeToMorse = void 0;
 // import { morseCode } from "./morse.js";
 // Select inputs
 var morseInput = document.getElementById("morse-input");
@@ -7,91 +11,11 @@ var englishInput = document.getElementById("english-input");
 var output = document.querySelector(".output"); // select buttons
 
 var submit = document.querySelector(".btn__submit");
-var clear = document.querySelector(".btn__clear");
-var alphabet = {
-  a: ".-",
-  b: "-...",
-  c: "-.-.",
-  d: "-..",
-  e: ".",
-  f: "..-.",
-  g: "--.",
-  h: "....",
-  i: "..",
-  j: ".---",
-  k: "-.-",
-  l: ".-..",
-  m: "--",
-  n: "-.",
-  o: "---",
-  p: ".--.",
-  q: "--.-",
-  r: ".-.",
-  s: "...",
-  t: "-",
-  u: "..-",
-  v: "...-",
-  w: ".--",
-  x: "-..-",
-  y: "-.--",
-  z: "--..",
-  " ": " ",
-  1: ".----",
-  2: "..---",
-  3: "...--",
-  4: "....-",
-  5: ".....",
-  6: "-....",
-  7: "--...",
-  8: "---..",
-  9: "----.",
-  0: "-----"
-};
-var morseCode = {
-  ".-": "a",
-  "-...": "b",
-  "-.-.": "c",
-  "-..": "d",
-  ".": "e",
-  "..-.": "f",
-  "--.": "g",
-  "....": "h",
-  "..": "i",
-  ".---": "j",
-  "-.-": "k",
-  ".-..": "l",
-  "--": "m",
-  "-.": "n",
-  "---": "o",
-  ".--.": "p",
-  "--.-": "q",
-  ".-.": "r",
-  "...": "s",
-  "-": "t",
-  "..-": "u",
-  "...-": "v",
-  ".--": "w",
-  "-..-": "x",
-  "-.--": "y",
-  "--..": "z",
-  "-----": "0",
-  ".----": "1",
-  "..---": "2",
-  "...--": "3",
-  "....-": "4",
-  ".....": "5",
-  "-....": "6",
-  "--...": "7",
-  "---..": "8",
-  "----.": "9"
-}; //Get value from english input field
-
-var englishText = englishInput.value; // Divide it into separate letters
-
-var lettersArr = function lettersArr(str) {
-  return str.toLowerCase().split("");
-}; // Function English to Morse Code
-
+var clear = document.querySelector(".btn__clear"); //Get value from english input field
+// const englishText = englishInput.value;
+// Divide it into separate letters
+// const lettersArr = (str) => str.toLowerCase().split("");
+// Function English to Morse Code
 
 var encodeToMorse = function encodeToMorse(str) {
   var lettersArr = str.toLowerCase().split(""); // Find english letters in the morseCode object and return morse character
@@ -101,9 +25,9 @@ var encodeToMorse = function encodeToMorse(str) {
   });
   var morseText = morseSymbols.join(" ");
   return morseText;
-  console.log(morseText);
 };
 
+exports.encodeToMorse = encodeToMorse;
 console.log(encodeToMorse("hello"));
 encodeToMorse("hello"); // output.innerHTML = morseText;
 ////////////////////////////////////////////////////////////////
@@ -120,5 +44,4 @@ encodeToMorse("hello"); // output.innerHTML = morseText;
 //   // console.log(englishLetters);
 // };
 // Event listeners
-
-submit.addEventListener("click", encodeToMorse);
+// submit.addEventListener("click", encodeToMorse);
