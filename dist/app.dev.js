@@ -45,13 +45,24 @@ var morseCode = {
   "--...": "7",
   "---..": "8",
   "----.": "9"
-}; // Function decode morse
+}; // Function translate to morse code
 
-var decodeMorse = function decodeMorse() {
-  var morseText = morseInput.value;
-  var textArr = morseText.split("");
-  console.log(textArr);
-}; // add event listeners to buttons and passing a function to translate
+var encodeToMorse = function encodeToMorse() {
+  //Get value from english input field
+  var englishText = englishInput.value; // Divide it into separate letters
+
+  var textArr = englishText.toLowerCase().split(""); // console.log(textArr);
+}; // // Function decode morse
+// const decodeMorse = () => {
+//   //Get value from morse input field
+//   const morseText = morseInput.value;
+//   // Divide it into separate characters
+//   const textArr = morseText.split("");
+//   // console.log(textArr);
+//   // const englishLetters = morseCode.map((char) => morseCode[char]);
+//   // console.log(englishLetters);
+// };
+// add event listeners to buttons and passing a function to translate
 
 
 submit.addEventListener("click", decodeMorse); // submit.addEventListener("click", alert("clicked"));

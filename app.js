@@ -47,12 +47,25 @@ const morseCode = {
   "----.": "9",
 };
 
-// Function decode morse
-const decodeMorse = () => {
-  const morseText = morseInput.value;
-  const textArr = morseText.split("");
-  console.log(textArr);
+// Function translate to morse code
+const encodeToMorse = () => {
+  //Get value from english input field
+  const englishText = englishInput.value;
+  // Divide it into separate letters
+  const textArr = englishText.toLowerCase().split("");
+  // console.log(textArr);
 };
+
+// // Function decode morse
+// const decodeMorse = () => {
+//   //Get value from morse input field
+//   const morseText = morseInput.value;
+//   // Divide it into separate characters
+//   const textArr = morseText.split("");
+//   // console.log(textArr);
+//   // const englishLetters = morseCode.map((char) => morseCode[char]);
+//   // console.log(englishLetters);
+// };
 
 // add event listeners to buttons and passing a function to translate
 submit.addEventListener("click", decodeMorse);
