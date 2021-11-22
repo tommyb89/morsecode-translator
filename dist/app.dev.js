@@ -1,6 +1,5 @@
 "use strict";
 
-// import { morseCode } from "./morse.js";
 // Select inputs
 var morseInput = document.getElementById("morse-input");
 var englishInput = document.getElementById("english-input");
@@ -86,18 +85,20 @@ var morseCode = {
   "----.": "9"
 }; // Function translate to morse code
 
-var encodeToMorse = function encodeToMorse() {
-  //Get value from english input field
-  var englishText = englishInput.value; // Divide it into separate letters
-
-  var lettersArr = englishText.toLowerCase().split(""); // console.log(textArr);
-  // Find english letters in the morseCode object
+var encodeToMorse = function encodeToMorse(word) {
+  // Divide it into separate letters
+  var lettersArr = word.toLowerCase().split(""); // Find english letters in the morseCode object and return morse character
 
   var morseSymbols = lettersArr.map(function (letter) {
     return alphabet[letter];
   });
-  console.log(morseSymbols);
-}; // // Function decode morse
+  var morseText = morseSymbols.join(" "); // output.innerHTML = morseText;
+
+  return morseText;
+}; //Get value from english input field
+
+
+var englishText = englishInput.value; // // Function decode morse
 // const decodeMorse = () => {
 //   //Get value from morse input field
 //   const morseText = morseInput.value;
@@ -107,8 +108,6 @@ var encodeToMorse = function encodeToMorse() {
 //   // const englishLetters = morseCode.map((char) => morseCode[char]);
 //   // console.log(englishLetters);
 // };
-// add event listeners to buttons and passing a function to translate
+// Event listeners
 
-
-submit.addEventListener("click", encodeToMorse); // submit.addEventListener("click", alert("clicked"));
-// Select all the morse code symbols
+submit.addEventListener("click", encodeToMorse);

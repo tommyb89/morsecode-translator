@@ -51,3 +51,9 @@ section .title {
   margin: 20px;
   font-weight: bold;
 }
+
+.output {
+  width: 300px;
+  resize: none;
+  padding: 5px;
+}
