@@ -1,4 +1,4 @@
-import { encodeToMorse, decodeMorse } from "./translate.js";
+import { encodeToMorse, decodeMorse } from "./encode.js";
 
 // Select inputs
 const morseInput = document.getElementById("morse-input");

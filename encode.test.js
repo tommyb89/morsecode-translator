@@ -1,8 +1,7 @@
 import { expect, it } from "@jest/globals";
-import { encodeToMorse } from "./encode.js";
+import { encodeToMorse, decodeMorse } from "./encode.js";
 
-// Translate symbols to letters
-
+// tests for encode english to morse
 it("should translate A to .-", () => {
   const result = encodeToMorse("A");
   expect(result).toBe(".-");
@@ -23,3 +22,5 @@ it("should translate !£$% to undefined ", () => {
   const result = encodeToMorse("!£$%");
   expect(result).toBeUndefined();
 });
+
+//tests for decode morse to english

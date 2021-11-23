@@ -1,6 +1,6 @@
 "use strict";
 
-var _translate = require("./translate.js");
+var _encode = require("./encode.js");
 
 // Select inputs
 var morseInput = document.getElementById("morse-input");
@@ -19,10 +19,10 @@ var clear = function clear() {
 var displayTranslation = function displayTranslation(word) {
   if (englishInput.value) {
     word = englishInput.value;
-    output.innerHTML = (0, _translate.encodeToMorse)(word);
+    output.innerHTML = (0, _encode.encodeToMorse)(word);
   } else if (morseInput.value) {
     word = morseInput.value;
-    output.innerHTML = (0, _translate.decodeMorse)(word);
+    output.innerHTML = (0, _encode.decodeMorse)(word);
   }
 }; // Event listeners
 
