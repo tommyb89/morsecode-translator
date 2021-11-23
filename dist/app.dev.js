@@ -8,17 +8,23 @@ var englishInput = document.getElementById("english-input");
 var output = document.querySelector(".output"); // Select buttons
 
 var submit = document.querySelector(".btn__submit");
-var clear = document.querySelector(".btn__clear");
-var wordToTranslate = englishInput.value;
+var clearOutput = document.querySelector(".btn__clear");
 
-var displayTranslation = function displayTranslation(wordToTranslate) {
-  output.innerHTML = (0, _encode.encodeToMorse)(wordToTranslate);
+var clear = function clear() {
+  return output.value = "";
 };
 
-console.log(displayTranslation(wordToTranslate));
+console.log(englishInput.value);
+
+var displayTranslation = function displayTranslation(word) {
+  word = englishInput.value;
+  output.innerHTML = (0, _encode.encodeToMorse)(word);
+};
+
 displayTranslation("hello"); // Event listeners
 
-submit.addEventListener("click", displayTranslation); ////////////////////////////////////////////////////////////////
+submit.addEventListener("click", displayTranslation);
+clearOutput.addEventListener("click", clear); ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////
 ///////////////////////////////////////////////
 // // Function decode morse

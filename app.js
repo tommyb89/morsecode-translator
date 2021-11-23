@@ -6,17 +6,20 @@ const englishInput = document.getElementById("english-input");
 const output = document.querySelector(".output");
 // Select buttons
 const submit = document.querySelector(".btn__submit");
-const clear = document.querySelector(".btn__clear");
+const clearOutput = document.querySelector(".btn__clear");
 
-const wordToTranslate = englishInput.value;
-const displayTranslation = (wordToTranslate) => {
-  output.innerHTML = encodeToMorse(wordToTranslate);
+const clear = () => (output.value = "");
+
+console.log(englishInput.value);
+const displayTranslation = (word) => {
+  word = englishInput.value;
+  output.innerHTML = encodeToMorse(word);
 };
-console.log(displayTranslation(wordToTranslate));
+
 displayTranslation("hello");
 // Event listeners
 submit.addEventListener("click", displayTranslation);
-
+clearOutput.addEventListener("click", clear);
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////
 ///////////////////////////////////////////////

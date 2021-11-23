@@ -77,7 +77,7 @@ export const encodeToMorse = (str) => {
     "----.": "9",
   };
   const lettersArr = str.toLowerCase().split("");
-
+  console.log(lettersArr);
   // Find english letters in the morseCode object and return morse character
   const morseSymbols = lettersArr.map((letter) => alphabet[letter]);
   const morseText = morseSymbols.join(" ");

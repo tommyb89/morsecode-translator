@@ -83,7 +83,8 @@ var encodeToMorse = function encodeToMorse(str) {
     "---..": "8",
     "----.": "9"
   };
-  var lettersArr = str.toLowerCase().split(""); // Find english letters in the morseCode object and return morse character
+  var lettersArr = str.toLowerCase().split("");
+  console.log(lettersArr); // Find english letters in the morseCode object and return morse character
 
   var morseSymbols = lettersArr.map(function (letter) {
     return alphabet[letter];
