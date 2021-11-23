@@ -17,9 +17,14 @@ section {
   }
 }
 
+h2 {
+  margin-bottom: 10px;
+}
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-top: 50px;
   gap: 10px;
 
@@ -27,6 +32,7 @@ section {
   &__english {
     display: flex;
     flex-direction: column;
+    width: 300px;
   }
 }
 
@@ -44,12 +50,13 @@ section {
   justify-content: center;
   display: flex;
   gap: 10px;
-  margin: 20px;
+
   &__submit,
   &__clear {
     padding: 10px;
     margin: 20px;
     font-weight: bold;
+    width: 110px;
   }
 }
 

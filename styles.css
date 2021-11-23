@@ -17,15 +17,22 @@ section .title {
   color: black;
 }
 
+h2 {
+  margin-bottom: 10px;
+}
+
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-top: 50px;
   gap: 10px;
 }
 .container__morse, .container__english {
   display: flex;
   flex-direction: column;
+  width: 300px;
 }
 
 #morse-input,
@@ -42,12 +49,12 @@ section .title {
   justify-content: center;
   display: flex;
   gap: 10px;
-  margin: 20px;
 }
 .btn__submit, .btn__clear {
   padding: 10px;
   margin: 20px;
   font-weight: bold;
+  width: 110px;
 }
 
 .output {

@@ -3,7 +3,7 @@
 var _encode = require("./encode.js");
 
 // Select inputs
-var morseInput = document.getElementById("morse-input").value;
+var morseInput = document.getElementById("morse-input");
 var englishInput = document.getElementById("english-input");
 var output = document.querySelector(".output"); // Select buttons
 

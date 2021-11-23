@@ -10,22 +10,23 @@
   <body>
     <section>
       <h1 class="title">Morse Code Translator</h1>
-      <form action="" class="container">
+      <form action="" class="container" id="form1">
         <div class="container__english">
           <label for="english">English</label>
-          <input type="text" id="english-input" name="english" />
+          <input type="text" id="english-input" name="english" required />
         </div>
         <div class="container__morse">
           <label for="morse">Morse Code</label>
-          <input type="text" id="morse-input" name="morse" />
+          <input type="text" id="morse-input" name="morse" required />
         </div>
       </form>
       <div class="btn">
-        <button class="btn__submit" type="submit">TRANSLATE</button>
+        <button class="btn__submit" value="Submit" form="form1" type="submit">
+          TRANSLATE
+        </button>
         <button class="btn__clear" type="submit">CLEAR</button>
       </div>
       <h2>Your translation</h2>
-
       <textarea class="output"></textarea>
     </section>
     <script type="module" src="app.js"></script>

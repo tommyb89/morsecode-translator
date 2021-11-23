@@ -13,3 +13,7 @@ var _encode = require("./encode.js");
   var result = (0, _encode.encodeToMorse)("hello");
   (0, _globals.expect)(result).toBe(".... . .-.. .-.. ---");
 });
+(0, _globals.it)("should translate empty field to empty field", function () {
+  var result = (0, _encode.encodeToMorse)("hello");
+  (0, _globals.expect)(result).toBe(".... . .-.. .-.. ---");
+});
