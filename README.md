@@ -25,11 +25,12 @@ This great little app will translate English words and numbers into a morse code
 
 ### Issues that I came across
 - main function was made prior to testing env and it made it harder to extract it later on to apply tests, so at first tests were working but then I couldn't display the translation on my website
-
+- once you translate one word into morse code, press clear it will clear input and output field but when you try to translator again it doesn't work, you need to refresh the page
 
 
 ### What's next?
 - Implement testing for decoding function
+- Fix functionality so you can translate many words without refreshing the page
 - Add functionality for sentences
 - Create a morse code keyboard/board of buttons
 - Implement text to speech function so it reads the translation
