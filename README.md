@@ -29,6 +29,8 @@ This great little app will translate English words and numbers into a morse code
 
 
 ### What's next?
+- Add media queries
+- Create a better looking design
 - Implement testing for decoding function
 - Fix functionality so you can translate many words without refreshing the page
 - Add functionality for sentences
