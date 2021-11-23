@@ -13,7 +13,15 @@ var _encode = require("./encode.js");
   var result = (0, _encode.encodeToMorse)("hello");
   (0, _globals.expect)(result).toBe(".... . .-.. .-.. ---");
 });
-(0, _globals.it)("should translate empty field to empty field", function () {
-  var result = (0, _encode.encodeToMorse)("hello");
-  (0, _globals.expect)(result).toBe(".... . .-.. .-.. ---");
+(0, _globals.it)("should translate empty field to be undefined", function () {
+  var result = (0, _encode.encodeToMorse)("");
+  (0, _globals.expect)(result).toBeUndefined();
+});
+(0, _globals.it)("should translate 1944  to .---- ----. ....- ....-", function () {
+  var result = (0, _encode.encodeToMorse)("1944");
+  (0, _globals.expect)(result).toBe(".---- ----. ....- ....-");
+});
+(0, _globals.it)("should translate !£$% to undefined ", function () {
+  var result = (0, _encode.encodeToMorse)("!£$%");
+  (0, _globals.expect)(result).toBeUndefined();
 });

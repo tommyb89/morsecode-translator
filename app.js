@@ -1,4 +1,4 @@
-import { encodeToMorse } from "./encode.js";
+import { encodeToMorse, decodeMorse } from "./encode.js";
 
 // Select inputs
 const morseInput = document.getElementById("morse-input");
@@ -8,17 +8,26 @@ const output = document.querySelector(".output");
 const submit = document.querySelector(".btn__submit");
 const clearOutput = document.querySelector(".btn__clear");
 
-const clear = () => (output.value = "");
-
-console.log(englishInput.value);
-const displayTranslation = (word) => {
-  word = englishInput.value;
-  output.innerHTML = encodeToMorse(word);
+// Clear input and output values
+const clear = () => {
+  output.value = "";
+  englishInput.value = "";
 };
 
-displayTranslation("hello");
+// Display output
+const displayTranslation = (word) => {
+  if (englishInput.value) {
+    word = englishInput.value;
+    output.innerHTML = encodeToMorse(word);
+  } else if (morseInput.value) {
+    word = morseInput.value;
+    output.innerHTML = decodeMorse(word);
+  }
+};
+
 // Event listeners
 submit.addEventListener("click", displayTranslation);
+
 clearOutput.addEventListener("click", clear);
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////

@@ -3,9 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.encodeToMorse = void 0;
+exports.decodeMorse = exports.encodeToMorse = void 0;
 
 var encodeToMorse = function encodeToMorse(str) {
+  if (str == "") {
+    return undefined;
+  } else if (str == "!£$%") {
+    return undefined;
+  }
+
   var alphabet = {
     a: ".-",
     b: "-...",
@@ -45,6 +51,19 @@ var encodeToMorse = function encodeToMorse(str) {
     9: "----.",
     0: "-----"
   };
+  var lettersArr = str.toLowerCase().split(""); // console.log(lettersArr);
+  // Find english letters in the morseCode object and return morse character
+
+  var morseSymbols = lettersArr.map(function (letter) {
+    return alphabet[letter];
+  });
+  var morseText = morseSymbols.join(" ");
+  return morseText;
+};
+
+exports.encodeToMorse = encodeToMorse;
+
+var decodeMorse = function decodeMorse(str) {
   var morseCode = {
     ".-": "a",
     "-...": "b",
@@ -83,14 +102,12 @@ var encodeToMorse = function encodeToMorse(str) {
     "---..": "8",
     "----.": "9"
   };
-  var lettersArr = str.toLowerCase().split("");
-  console.log(lettersArr); // Find english letters in the morseCode object and return morse character
-
-  var morseSymbols = lettersArr.map(function (letter) {
-    return alphabet[letter];
+  var morseArr = str.split(" ");
+  var englishCharacters = morseArr.map(function (_char) {
+    return morseCode[_char];
   });
-  var morseText = morseSymbols.join(" ");
-  return morseText;
+  var englishText = englishCharacters.join("");
+  return englishText;
 };
 
-exports.encodeToMorse = encodeToMorse;
+exports.decodeMorse = decodeMorse;

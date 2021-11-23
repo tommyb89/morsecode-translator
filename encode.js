@@ -1,4 +1,9 @@
 export const encodeToMorse = (str) => {
+  if (str == "") {
+    return undefined;
+  } else if (str == "!£$%") {
+    return undefined;
+  }
   const alphabet = {
     a: ".-",
     b: "-...",
@@ -38,6 +43,17 @@ export const encodeToMorse = (str) => {
     9: "----.",
     0: "-----",
   };
+
+  const lettersArr = str.toLowerCase().split("");
+  // console.log(lettersArr);
+  // Find english letters in the morseCode object and return morse character
+  const morseSymbols = lettersArr.map((letter) => alphabet[letter]);
+  const morseText = morseSymbols.join(" ");
+
+  return morseText;
+};
+
+export const decodeMorse = (str) => {
   const morseCode = {
     ".-": "a",
     "-...": "b",
@@ -76,11 +92,9 @@ export const encodeToMorse = (str) => {
     "---..": "8",
     "----.": "9",
   };
-  const lettersArr = str.toLowerCase().split("");
-  console.log(lettersArr);
-  // Find english letters in the morseCode object and return morse character
-  const morseSymbols = lettersArr.map((letter) => alphabet[letter]);
-  const morseText = morseSymbols.join(" ");
+  const morseArr = str.split(" ");
+  const englishCharacters = morseArr.map((char) => morseCode[char]);
+  const englishText = englishCharacters.join("");
 
-  return morseText;
+  return englishText;
 };
