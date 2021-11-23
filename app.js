@@ -1,4 +1,4 @@
-import { encodeToMorse, decodeMorse } from "./encode.js";
+import { encodeToMorse, decodeMorse } from "./translate.js";
 
 // Select inputs
 const morseInput = document.getElementById("morse-input");
@@ -14,7 +14,7 @@ const clear = () => {
   englishInput.value = "";
 };
 
-// Display output
+// Display translation
 const displayTranslation = (word) => {
   if (englishInput.value) {
     word = englishInput.value;
@@ -29,16 +29,3 @@ const displayTranslation = (word) => {
 submit.addEventListener("click", displayTranslation);
 
 clearOutput.addEventListener("click", clear);
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////
-///////////////////////////////////////////////
-// // Function decode morse
-// const decodeMorse = () => {
-//   //Get value from morse input field
-//   const englishText = morseInput.value;
-//   // Divide it into separate characters
-//   const textArr = morseText.split("");
-//   // console.log(textArr);
-//   // const englishLetters = morseCode.map((char) => morseCode[char]);
-//   // console.log(englishLetters);
-// };

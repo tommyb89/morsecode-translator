@@ -1,6 +1,6 @@
 "use strict";
 
-var _encode = require("./encode.js");
+var _translate = require("./translate.js");
 
 // Select inputs
 var morseInput = document.getElementById("morse-input");
@@ -13,31 +13,19 @@ var clearOutput = document.querySelector(".btn__clear"); // Clear input and outp
 var clear = function clear() {
   output.value = "";
   englishInput.value = "";
-}; // Display output
+}; // Display translation
 
 
 var displayTranslation = function displayTranslation(word) {
   if (englishInput.value) {
     word = englishInput.value;
-    output.innerHTML = (0, _encode.encodeToMorse)(word);
+    output.innerHTML = (0, _translate.encodeToMorse)(word);
   } else if (morseInput.value) {
     word = morseInput.value;
-    output.innerHTML = (0, _encode.decodeMorse)(word);
+    output.innerHTML = (0, _translate.decodeMorse)(word);
   }
 }; // Event listeners
 
 
 submit.addEventListener("click", displayTranslation);
-clearOutput.addEventListener("click", clear); ////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////
-///////////////////////////////////////////////
-// // Function decode morse
-// const decodeMorse = () => {
-//   //Get value from morse input field
-//   const englishText = morseInput.value;
-//   // Divide it into separate characters
-//   const textArr = morseText.split("");
-//   // console.log(textArr);
-//   // const englishLetters = morseCode.map((char) => morseCode[char]);
-//   // console.log(englishLetters);
-// };
+clearOutput.addEventListener("click", clear);
