@@ -19,7 +19,7 @@ This great little app will translate English words and numbers into a morse code
 * split()
 * map()
 * join()
-5. Test my two main function with JEST, applied few cases for which app should be tested
+5. Tested my encode to englush function with JEST, applied few cases for which app should be tested
 6. Functions are imported into the app.js and pssed in to a displayTranslation function. Which takes value from both input fields and passes it through the right translation.
 7. Translation is then displayed in a textarea
 
