@@ -1,4 +1,4 @@
-# morsecode-translator made by Tomzy
+# morsecode-translator made by Tomz
 This great little app will translate English words and numbers into a morse code and other way around!
 
 ## Tech used
