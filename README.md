@@ -5,8 +5,8 @@ This great little app will translate English words and numbers into a morse code
 - HTML / SASS / JAVASCRIPT / JEST TESTING
 
 ## How it works
-- User can write english words, sentences or numbers inside the English input field 
-- you can write morse code inside morse code input field
+-Uuser can write english words or numbers inside the English input field 
+- You can write morse code inside morse code input field
 - To translate your input from any field click on TRANSLATE button and the translation will be displayed in textbox underneath "Your translation" 
 
 ## App breakdown
@@ -29,5 +29,7 @@ This great little app will translate English words and numbers into a morse code
 
 
 ### What's next?
-- create a morse code keyboard/board of buttons
-- implement text to speech function so it reads the translation
+- Implement testing for decoding function
+- Add functionality for sentences
+- Create a morse code keyboard/board of buttons
+- Implement text to speech function so it reads the translation
