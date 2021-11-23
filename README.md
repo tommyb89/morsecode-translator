@@ -1,5 +1,5 @@
 # morsecode-translator made by Tomzy
-This great app will translate English words into a morse code and other way around!
+This great little app will translate English words and numbers into a morse code and other way around!
 
 ## Tech used
 - HTML / SASS / JAVASCRIPT / JEST TESTING
