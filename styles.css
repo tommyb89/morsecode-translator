@@ -1,9 +1,4 @@
-@use "./sass/abstracts/mixins";
-@use "./sass/abstracts/variables";
-h2 {
-  margin-bottom: 10px;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;1,300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +10,43 @@ body {
   height: 100vh;
   width: 100%;
   text-align: center;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.btn {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.btn__submit, .btn__clear {
+  padding: 10px;
+  margin: 20px;
+  font-weight: bold;
+  width: 110px;
+}
+
+header {
+  background: #d3c9b7;
+  padding: 20px;
+}
+
+main {
+  background-color: palegoldenrod;
+  height: 80%;
+}
+
+footer {
+  padding: 20px;
+  margin: auto;
 }
 
 .form {
@@ -31,7 +63,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 50px;
   gap: 10px;
 }
 
@@ -54,23 +85,6 @@ body {
   border: 2px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
-}
-
-.btn {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10px;
-}
-
-.btn__submit, .btn__clear {
-  padding: 10px;
-  margin: 20px;
-  font-weight: bold;
-  width: 110px;
 }
 
 .output {

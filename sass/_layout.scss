@@ -1,0 +1,45 @@
+header {
+  background: rgb(211, 201, 183);
+  padding: 20px;
+}
+
+main {
+  background-color: palegoldenrod;
+  height: 80%;
+}
+
+footer {
+  padding: 20px;
+  margin: auto;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  &__morse,
+  &__english {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+}
+
+#morse-input,
+#english-input {
+  padding: 5px;
+  margin: 10px;
+  font-size: 20px;
+  border: 2px solid $color-tertiary;
+  border-radius: 4px;
+  background-color: $color-secondary;
+}
+
+.output {
+  width: 300px;
+  resize: none;
+  padding: 10px;
+  font-size: 24px;
+}

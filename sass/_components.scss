@@ -1,0 +1,13 @@
+.btn {
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+
+  &__submit,
+  &__clear {
+    padding: 10px;
+    margin: 20px;
+    font-weight: bold;
+    width: 110px;
+  }
+}
