@@ -18,14 +18,13 @@ const clear = () => {
 const displayTranslation = (word) => {
   if (englishInput.value) {
     word = englishInput.value;
-    output.innerHTML = encodeToMorse(word);
+    return (output.innerHTML = encodeToMorse(word));
   } else if (morseInput.value) {
     word = morseInput.value;
-    output.innerHTML = decodeMorse(word);
+    return (output.innerHTML = decodeMorse(word));
   }
 };
 
 // Event listeners
 submit.addEventListener("click", displayTranslation);
-
 clearOutput.addEventListener("click", clear);

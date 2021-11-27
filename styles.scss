@@ -1,3 +1,17 @@
+@use "./sass/abstracts/mixins";
+@use "./sass/abstracts/variables";
+
+@use "./sass/base/reset";
+@use "./sass/base/typography";
+
+@use "./sass/components/buttons";
+
+@use "./sass/layout/footer";
+@use "./sass/layout/forms";
+@use "./sass/layout/header";
+
+@use "./sass/pages/home";
+
 * {
   margin: 0;
   padding: 0;

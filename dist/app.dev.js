@@ -19,10 +19,10 @@ var clear = function clear() {
 var displayTranslation = function displayTranslation(word) {
   if (englishInput.value) {
     word = englishInput.value;
-    output.innerHTML = (0, _encode.encodeToMorse)(word);
+    return output.innerHTML = (0, _encode.encodeToMorse)(word);
   } else if (morseInput.value) {
     word = morseInput.value;
-    output.innerHTML = (0, _encode.decodeMorse)(word);
+    return output.innerHTML = (0, _encode.decodeMorse)(word);
   }
 }; // Event listeners
 
