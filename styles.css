@@ -11,45 +11,46 @@ body {
   width: 100%;
   text-align: center;
   font-family: "Chakra Petch", sans-serif;
+  background-color: #222831;
 }
 
-h2 {
-  margin-bottom: 10px;
+body h2 {
+  margin-top: 20px;
 }
 
-.btn {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10px;
+.btns {
+  margin-top: 20px;
 }
 
-.btn__submit, .btn__clear {
+.btns .btn {
   padding: 10px;
-  margin: 20px;
   font-weight: bold;
   width: 110px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btns .btn:hover {
+  background-color: #00adb5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #eeeeee;
 }
 
 header {
-  background: #d3c9b7;
   padding: 20px;
+}
+
+header .title {
+  color: #eeeeee;
 }
 
 main {
-  background-color: palegoldenrod;
   height: 80%;
-}
-
-footer {
   padding: 20px;
-  margin: auto;
 }
 
-.form {
+main .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,7 +67,7 @@ footer {
   gap: 10px;
 }
 
-.form__morse, .form__english {
+main .form__morse, main .form__english {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,21 +75,43 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 300px;
+  width: 100%;
 }
 
-#morse-input,
-#english-input {
-  padding: 5px;
-  margin: 10px;
+main .form label {
+  color: #00adb5;
+  font-style: italic;
   font-size: 20px;
-  border: 2px solid #ccc;
+  font-weight: bold;
+}
+
+main .form #morse-input,
+main .form #english-input {
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 20px;
+  border: 2px dotted #eeeeee;
   border-radius: 4px;
-  background-color: #f8f8f8;
+}
+
+main .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+footer {
+  padding: 20px;
+  margin: auto;
 }
 
 .output {
-  width: 300px;
+  margin-top: 10px;
+  width: 100%;
   resize: none;
   padding: 10px;
   font-size: 24px;

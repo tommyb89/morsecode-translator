@@ -1,13 +1,17 @@
-.btn {
-  justify-content: center;
-  display: flex;
-  gap: 10px;
+.btns {
+  margin-top: 20px;
 
-  &__submit,
-  &__clear {
+  .btn {
     padding: 10px;
-    margin: 20px;
     font-weight: bold;
     width: 110px;
+    border-radius: 5px;
+    border: none;
+
+    &:hover {
+      background-color: $color-tertiary;
+      transition: 0.3s;
+      color: $color-secondary;
+    }
   }
 }
