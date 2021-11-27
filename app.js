@@ -8,6 +8,8 @@ const output = document.querySelector(".output");
 const submit = document.querySelector(".btn__submit");
 const clearOutput = document.querySelector(".btn__clear");
 
+const footer = document.querySelector("footer");
+
 // Clear input and output values
 const clear = () => {
   output.value = "";
@@ -25,6 +27,11 @@ const displayTranslation = (word) => {
   }
 };
 
+const copyright = () => {
+  const currentYear = new Date().getFullYear();
+  return (footer.innerHTML = `Copyright &copy; ${currentYear} Made by Tomzy`);
+};
+copyright();
 // Event listeners
 submit.addEventListener("click", displayTranslation);
 clearOutput.addEventListener("click", clear);

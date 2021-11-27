@@ -8,14 +8,16 @@
     <title>Morse Code Translator Javascript with JEST testing</title>
   </head>
   <body>
-    <section>
+    <header>
       <h1 class="title">Morse Code Translator</h1>
-      <form action="" class="container" id="form1">
-        <div class="container__english">
+    </header>
+    <main>
+      <form action="" class="form" id="form1">
+        <div class="form__english">
           <label for="english">English</label>
           <input type="text" id="english-input" name="english" required />
         </div>
-        <div class="container__morse">
+        <div class="form__morse">
           <label for="morse">Morse Code</label>
           <input type="text" id="morse-input" name="morse" />
         </div>
@@ -26,7 +28,8 @@
       </div>
       <h2>Your translation</h2>
       <textarea class="output"></textarea>
-    </section>
+    </main>
+    <footer>Copyright &copy;</footer>
     <script type="module" src="app.js"></script>
   </body>
 </html>

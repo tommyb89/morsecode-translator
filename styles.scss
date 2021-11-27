@@ -1,16 +1,24 @@
 @use "./sass/abstracts/mixins";
 @use "./sass/abstracts/variables";
 
-@use "./sass/base/reset";
-@use "./sass/base/typography";
+@import "./sass/base/reset";
+@import "./sass/base/typography";
 
-@use "./sass/components/buttons";
+@import "./sass/components/buttons";
 
-@use "./sass/layout/footer";
-@use "./sass/layout/forms";
-@use "./sass/layout/header";
+@import "./sass/layout/footer";
+@import "./sass/layout/forms";
+@import "./sass/layout/_header";
 
-@use "./sass/pages/home";
+@import "./sass/pages/home";
+
+// Colors
+$color-primary: rgb(0, 0, 0);
+$color-secondary: #f8f8f8;
+$color-tertiary: #ccc;
+h2 {
+  margin-bottom: 10px;
+}
 
 * {
   margin: 0;
@@ -21,20 +29,10 @@
 body {
   height: 100vh;
   width: 100%;
-}
-
-section {
-  margin-top: 100px;
   text-align: center;
-  & .title {
-    color: rgb(0, 0, 0);
-  }
 }
 
-h2 {
-  margin-bottom: 10px;
-}
-.container {
+.form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,9 +53,9 @@ h2 {
   padding: 5px;
   margin: 10px;
   font-size: 20px;
-  border: 2px solid #ccc;
+  border: 2px solid $color-tertiary;
   border-radius: 4px;
-  background-color: #f8f8f8;
+  background-color: $color-secondary;
 }
 
 .btn {
