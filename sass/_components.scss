@@ -9,9 +9,9 @@
     border: none;
 
     &:hover {
-      background-color: $color-tertiary;
+      background-color: $color-secondary;
       transition: 0.3s;
-      // color: $color-secondary;
+      color: $color-primary;
     }
   }
 }

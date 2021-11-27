@@ -4,7 +4,7 @@ header {
 
 main {
   padding: 20px;
-  border: 2px dashed $color-tertiary;
+  border: 2px dashed $color-secondary;
   margin: 10px;
   .form {
     display: flex;
@@ -21,7 +21,7 @@ main {
     }
 
     label {
-      color: $color-secondary;
+      color: $color-primary;
       font-style: italic;
       font-size: 20px;
       font-weight: bold;
@@ -31,7 +31,7 @@ main {
       margin-top: 5px;
       padding: 5px;
       font-size: 20px;
-      border: 2px dotted $color-secondary;
+      border: 2px dotted $color-primary;
       border-radius: 4px;
     }
   }

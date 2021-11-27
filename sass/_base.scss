@@ -1,7 +1,6 @@
 // Variables
 // Colors
-$color-primary: #1e2022;
-$color-secondary: #f0f5f9;
+$color-primary: #f0f5f9;
 $color-tertiary: #c9d6df;
 $bg-color: #52616b;
 
@@ -22,7 +21,7 @@ body {
   text-align: center;
   font-family: $primary-font;
   background-color: $bg-color;
-  color: $color-secondary;
+  color: $color-primary;
 
   h2 {
     margin-top: 20px;
