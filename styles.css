@@ -11,7 +11,8 @@ body {
   width: 100%;
   text-align: center;
   font-family: "Chakra Petch", sans-serif;
-  background-color: #222831;
+  background-color: #52616b;
+  color: #f0f5f9;
 }
 
 body h2 {
@@ -31,23 +32,19 @@ body h2 {
 }
 
 .btns .btn:hover {
-  background-color: #00adb5;
+  background-color: #c9d6df;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  color: #eeeeee;
 }
 
 header {
   padding: 20px;
 }
 
-header .title {
-  color: #eeeeee;
-}
-
 main {
-  height: 80%;
   padding: 20px;
+  border: 2px dashed #c9d6df;
+  margin: 10px;
 }
 
 main .form {
@@ -75,11 +72,11 @@ main .form__morse, main .form__english {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: 90%;
 }
 
 main .form label {
-  color: #00adb5;
+  color: #f0f5f9;
   font-style: italic;
   font-size: 20px;
   font-weight: bold;
@@ -90,7 +87,7 @@ main .form #english-input {
   margin-top: 5px;
   padding: 5px;
   font-size: 20px;
-  border: 2px dotted #eeeeee;
+  border: 2px dotted #f0f5f9;
   border-radius: 4px;
 }
 
@@ -98,9 +95,8 @@ main .btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
 }
 

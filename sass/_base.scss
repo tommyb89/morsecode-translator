@@ -1,9 +1,9 @@
 // Variables
 // Colors
-$color-primary: rgb(0, 0, 0);
-$color-secondary: #eeeeee;
-$color-tertiary: #00adb5;
-$bg-color: #222831;
+$color-primary: #1e2022;
+$color-secondary: #f0f5f9;
+$color-tertiary: #c9d6df;
+$bg-color: #52616b;
 
 // Fonts
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;1,300&display=swap");
@@ -22,6 +22,7 @@ body {
   text-align: center;
   font-family: $primary-font;
   background-color: $bg-color;
+  color: $color-secondary;
 
   h2 {
     margin-top: 20px;
