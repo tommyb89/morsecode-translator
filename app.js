@@ -5,8 +5,8 @@ const morseInput = document.getElementById("morse-input");
 const englishInput = document.getElementById("english-input");
 const output = document.querySelector(".output");
 // Select buttons
-const submit = document.querySelector(".btn__submit");
-const clearOutput = document.querySelector(".btn__clear");
+const submit = document.querySelector(".btns__submit");
+const clearOutput = document.querySelector(".btns__clear");
 
 const footer = document.querySelector("footer");
 
