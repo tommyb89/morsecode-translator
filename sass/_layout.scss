@@ -1,11 +1,13 @@
 header {
   padding: 20px;
+  height: 200px;
 }
 
 main {
   padding: 20px;
   border: 2px dashed $color-secondary;
   margin: 10px;
+
   .form {
     display: flex;
     justify-content: center;
